@@ -9,4 +9,5 @@ jar {
     manifest {
         attributes('Main-Class': 'edu.gatech.oad.antlab.pkg1')
     }
+    from configurations.runtime.collect { zipTree(it) }
 }
