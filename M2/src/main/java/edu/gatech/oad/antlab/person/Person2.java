@@ -35,7 +35,7 @@ public class Person2 {
 	  int tempNum;
 	  char[] inputChar = input.toCharArray();
 	  for(int i = 0; i < input.length(); i++) {
-	  	tempNum = (int) (Math.random()*input.length());
+	  	tempNum = (int) (Math.random()*(input.length()-1));
 		temp = input.charAt(i);
 		inputChar[i] = input.charAt(tempNum);
 		inputChar[tempNum] = input.charAt(temp);
