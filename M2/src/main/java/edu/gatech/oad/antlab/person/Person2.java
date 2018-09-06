@@ -31,7 +31,17 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+	  char temp;
+	  int tempNum;
+	  char[] inputChar = input.toCharArray();
+	  for(int i = 0; i < input.length(); i++) {
+	  	tempNum = (int) (Math.random()*input.length());
+		temp = input.charAt(i);
+		inputChar[i] = input.charAt(tempNum);
+		inputChar[tempNum] = input.charAt(temp);
+	  }
+	  String result = String.valueOf(inputChar);
+	  return result;
 	}
 	/**
 	 * Return a string rep of this object
