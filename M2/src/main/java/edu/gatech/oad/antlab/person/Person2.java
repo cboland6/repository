@@ -31,16 +31,18 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  char temp;
+	  StringBuilder temp = new StringBuilder(input);
 	  int tempNum;
-	  char[] inputChar = input.toCharArray();
+	  char tempChar;
 	  for(int i = 0; i < input.length(); i++) {
-	  	tempNum = (int) (Math.random()*(input.length()-1));
-		temp = input.charAt(i);
-		inputChar[i] = input.charAt(tempNum);
-		inputChar[tempNum] = input.charAt(temp);
+		tempNum = (int) (Math.random()*(input.length()-1));
+		tempChar = input.charAt(i);
+		temp.deleteCharAt(i);	
+		temp.insert(i, input.charAt(tempNum));
+		temp.deleteCharAt(tempNum);
+		temp.insert(tempNum, tempChar);
 	  }
-	  String result = String.valueOf(inputChar);
+	  String result = temp.toString();
 	  return result;	
 	}
 	/**
