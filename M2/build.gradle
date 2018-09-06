@@ -1,5 +1,5 @@
 defaultTasks: 'jar'
-apply plugin: 'java-library'
+apply plugin: 'java'
 
 repositorites {
     mavenCentral()
