@@ -1,10 +1,6 @@
 defaultTasks 'jar'
 apply plugin: 'java'
 
-repositorites {
-    mavenCentral()
-}
-
 dependencies {
     compileFiles('lib/resources.jar') 
 }
