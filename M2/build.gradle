@@ -6,7 +6,7 @@ repositorites {
 }
 
 dependencies {
-    compile files('lib/resources.jar') 
+    compileFiles('lib/resources.jar') 
 }
 
 jar {
