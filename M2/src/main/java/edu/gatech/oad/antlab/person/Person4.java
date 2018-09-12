@@ -1,4 +1,4 @@
-// package edu.gatech.oad.antlab.person;
+package edu.gatech.oad.antlab.person;
 
 /**
  *  A simple class for person 4
@@ -33,7 +33,7 @@ public class Person4 {
       //Person 4 put your implementation here
         String increment = "";
         for(int i =0; i < input.length(); i++) {
-            increment += input.charAt(i) +1;
+            increment += (char) (input.charAt(i) + 1);
         }
       return increment;
     }
